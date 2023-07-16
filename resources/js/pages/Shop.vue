@@ -131,7 +131,7 @@
                                 <li :class="getEnchantLvl(enchant) ? 'checked' : ''" v-for="enchant in all_enchants" @click.left="changeEnchant(enchant, true)" @click.right="changeEnchant(enchant, false)">
                                     <div>{{ enchant.name }} <span>{{ getEnchantLvl(enchant) + ' / ' + enchant.max_level}}</span></div>
                                     <div class="col"></div>
-                                    <div>{{ getEnchantPrice(enchant) }} стрим.</div>
+                                    <div>{{ getEnchantPrice(enchant) }} эйв.</div>
                                 </li>
                             </ul>
                             <p>

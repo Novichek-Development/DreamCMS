@@ -20,24 +20,14 @@
                 <div class="footer py-4">
                     <user-selector v-if="forFriend" class="mb-4" v-model="selectedUser"></user-selector>
 
-                    <a href="#" class="btn_large warning mb-2" @click.prevent="enot">
+                    <a href="#" class="btn_large primary mb-2" @click.prevent="unitpay">
                         <span>Пополнить баланс {{ selectedUser ? 'для ' + selectedUser.login : 'через:' }}</span>
-                        <small>Enot.IO</small>
+                        <small>Visa/MasterCard/Мир</small>
                     </a>
 
-                    <a href="#" class="btn_large success mb-2" @click.prevent="interkassa">
+                    <a href="#" class="btn_large primary mb-2" @click.prevent="freekassa">
                         <span>Пополнить баланс {{ selectedUser ? 'для ' + selectedUser.login : 'через:' }}</span>
-                        <small>Interkassa</small>
-                    </a>
-
-                    <a href="#" class="btn_large success mb-2" @click.prevent="freekassa">
-                        <span>Пополнить баланс {{ selectedUser ? 'для ' + selectedUser.login : 'через:' }}</span>
-                        <small>Freekassa</small>
-                    </a>
-
-                    <a href="#" class="btn_large success mb-2" @click.prevent="qiwip2p">
-                        <span>Пополнить баланс {{ selectedUser ? 'для ' + selectedUser.login : 'через:' }}</span>
-                        <small>Qiwi P2P</small>
+                        <small>Электронные платежи, Криптовалюта и др.</small>
                     </a>
 
                     <a href="#" class="dashed_link mt-3 mt-sm-2" @click.prevent="forFriend = !forFriend">{{ forFriend ? 'Или пополните свой аккаунт' : 'Или переведите выбранную сумму своему другу' }}</a>
@@ -89,6 +79,18 @@
                 if (sum === 3000) return this.sum >= 3000 && this.sum < 5000;
                 if (sum === 5000) return this.sum >= 5000;
             },
+            digiseller(){
+              var data = {
+                id_d: 3086435,
+                typecurr: 'WMR',
+                lang: 'ru-RU',
+                failpage: 'https://' + window.location.hostname + '/page/failed',
+                unit_cnt: Math.round(this.sum),
+                uuid: this.selectedUser ? this.selectedUser.uuid : this.user.uuid
+              }
+
+              this.submit({method: 'POST', path: 'https://oplata.info/asp2/pay.asp', data: data});
+            },
             unitpay(){
                 this.payment = new UnitPay();
                 this.payment.createWidget({
@@ -103,6 +105,25 @@
                 });
                 this.payment.error(function (message, params) {
                     console.log(message);
+                });
+            },
+            skinpay(){
+                api.post('pay/skinpay', {
+                    account: this.selectedUser ? this.selectedUser.uuid : this.user.uuid,
+                }).then(response => {
+                    if (response.data.url){
+                        window.location = response.data.url;
+                    }
+                });
+            },
+            obmenka(){
+                api.post('pay/obmenka', {
+                    account: this.selectedUser ? this.selectedUser.uuid : this.user.uuid,
+                    sum: this.sum
+                }).then(response => {
+                    if (response.data.url){
+                      window.location = response.data.url;
+                    }
                 });
             },
             enot(){

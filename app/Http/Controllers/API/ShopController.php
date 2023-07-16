@@ -105,7 +105,7 @@ class ShopController extends Controller
                 $item->price = $item->price * ((100 - $item->discount)/100);
             }
 
-            $item->icon = '/items/' . $item->type . ($item->damage ? '@' . $item->damage : '') . '.png';
+            $item->icon = '/assets/shop/items/' . $item->type . ($item->damage ? '@' . $item->damage : '') . '.png';
 
             return $item;
         });

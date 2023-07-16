@@ -50,7 +50,7 @@ export default [
             component: News,
             name: 'news',
             meta: {
-               title: 'AveMC | Сервера с модами',
+               title: 'Ave MC',
                metaTags: [
                   {
                      name: 'description',

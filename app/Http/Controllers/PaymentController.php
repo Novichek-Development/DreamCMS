@@ -160,26 +160,28 @@ class PaymentController extends Controller{
             'sum' => $sum
         ]);
 
-        $merchant_id = config('settings.freekassa_public', 'demo');
-        $secret_word = config('settings.freekassa_secret', 'demo');
+        $merchant_id = '36857';
+        $secret_word = 'C8)SWE*Hy^N%Dwd';
+	$currency = 'RUB';
 
         $data = [
             'm' => $merchant_id,
             'o' => $orderID,
-            's' => md5($merchant_id.':'.$sum.':'.$secret_word.':'.$orderID),
+            'currency' => $currency,
+            's' => md5($merchant_id.':'.$sum.':'.$secret_word.':'.$currency.':'.$orderID),
             'oa' => $sum,
         ];
 
         return [
             'success' => true,
-            'url' => 'https://www.free-kassa.ru/merchant/cash.php?' . http_build_query($data),
+            'url' => 'https://pay.freekassa.ru/?' . http_build_query($data),
             'data' => []
         ];
     }
 
     public function freekassaSuccess(Request $request){
-        $merchant_id = config('settings.freekassa_public', 'demo');
-        $secret_word = config('settings.freekassa_secret', 'demo');
+        $merchant_id = '36857';
+        $secret_word = 'PcsZ@QkV/,03vAr';
 
         $sum = $request->get('AMOUNT');
         $orderID = $request->get('MERCHANT_ORDER_ID');

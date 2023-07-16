@@ -153,18 +153,33 @@ footer {
   .banner{
     display: inline-block;
     background: rgba(255, 255, 255, .1);
-    border: 1px solid rgba(193, 181, 238, .4);
     font-size: 0;
     opacity: .8;
     &:hover{
       opacity:1;
     }
   }
+  .banner__item--horizontal {
+    margin: auto;
+    width: auto;
+    height: 35px;
+    display: none;
+  }
+  .banner__item--vertical {
+    width: 88px;
+    height: auto;
+  }
 }
 
 @media (max-width: 992px) {
   footer .link{
     margin:0 10px!important;
+  }
+  footer .banner__item--horizontal {
+    display: block;
+  }
+  footer .banner__item--vertical {
+    display: none;
   }
 }
 @media (max-width: 576px) {

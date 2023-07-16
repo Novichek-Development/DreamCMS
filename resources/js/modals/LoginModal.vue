@@ -47,29 +47,7 @@
                                     <a href="#" class="btn_common primary" @click.prevent="runCaptcha">Войти на сайт</a>
                                 </div>
                             </div>
-                            <div class="row mt-3">
-                                <div class="col-12 col-md-5"></div>
-                                <div class="col-12 col-sm-9 col-md">
-                                    <vue-telegram-login
-                                        mode="redirect"
-                                        telegram-login="dreamcms_bot"
-                                        :redirect-url="url('/oauth/login/telegram')"
-                                        userpic
-                                        radius="5"
-                                        requestAccess="write"
-                                    />
-                                </div>
                             </div>
-                            <div class="row mt-3">
-                                <div class="col-12 col-md-5">
-                                    <label>Войти через:</label>
-                                </div>
-                                <div class="col-12 col-sm-9 col-md">
-                                    <a :href="getIntegrationURL('vkontakte', 'login')" class="btn_common info" style="font-size: 28px"><i class="fab fa-vk"></i></a>
-                                    <a :href="getIntegrationURL('discord', 'login')" class="btn_common info" style="font-size: 28px"><i class="fab fa-discord"></i></a>
-                                    <a :href="getIntegrationURL('yandex', 'login')" class="btn_common info" style="font-size: 28px"><i class="fab fa-yandex"></i></a>
-                                    <a :href="getIntegrationURL('steam', 'login')" class="btn_common info" style="font-size: 28px"><i class="fab fa-steam"></i></a>
-                                </div>
                             </div>
                         </div>
                     </div>

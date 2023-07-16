@@ -30,7 +30,7 @@
             <div class="col-12 col-sm-6 col-lg-4 col-xl">
                 <a href="#" :class="'privilege vip ' + (selectedGroup === 'VIP' ? 'checked' : '')" @click.prevent="selectedGroup = 'VIP'">
                     <h5>VIP</h5>
-                    <p>{{ getDonateGroup('VIP').price }} ТОКЕНОВ</p>
+                    <p>{{ getDonateGroup('VIP').price }} ЭЙВОВ</p>
                     <ul>
                         <li>
                             <b>+4</b> региона по<br>
@@ -50,7 +50,7 @@
             <div class="col-12 col-sm-6 col-lg-4 col-xl mt-3 mt-sm-0">
                 <a href="#" :class="'privilege premium ' + (selectedGroup === 'Premium' ? 'checked' : '')" @click.prevent="selectedGroup = 'Premium'">
                     <h5>PREMIUM</h5>
-                    <p>{{ getDonateGroup('Premium').price }} ТОКЕНОВ</p>
+                    <p>{{ getDonateGroup('Premium').price }} ЭЙВОВ</p>
                     <ul>
                         <li>
                             <b>+6</b> регионов по<br>
@@ -71,7 +71,7 @@
             <div class="col-12 col-sm-6 col-lg-4 col-xl mt-3 mt-lg-0">
                 <a href="#" :class="'privilege deluxe ' + (selectedGroup === 'Deluxe' ? 'checked' : '')" @click.prevent="selectedGroup = 'Deluxe'">
                     <h5>DELUXE</h5>
-                    <p>{{ getDonateGroup('Deluxe').price }} ТОКЕНОВ</p>
+                    <p>{{ getDonateGroup('Deluxe').price }} ЭЙВОВ</p>
                     <ul>
                         <li>
                             <b>+8</b> регионов по<br>
@@ -92,7 +92,7 @@
             <div class="col-12 col-sm-6 col-lg-6 col-xl-4 mt-3 mt-xl-0">
                 <a href="#" :class="'privilege legend ' + (selectedGroup === 'Legend' ? 'checked' : '')" @click.prevent="selectedGroup = 'Legend'">
                     <h5>LEGEND</h5>
-                    <p>{{ getDonateGroup('Legend').price }} ТОКЕНОВ</p>
+                    <p>{{ getDonateGroup('Legend').price }} ЭЙВОВ</p>
                     <ul>
                         <li>
                             <b>+10</b> регионов по<br>

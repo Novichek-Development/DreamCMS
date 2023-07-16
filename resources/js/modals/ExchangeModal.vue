@@ -5,7 +5,7 @@
                 <div class="header px-3 px-sm-5 pb-2 pb-sm-4">
                     <h2>Обменный пункт</h2>
                     <div class="row justify-content-center">
-                        <p class="col-9 p-0">Эйвы — это валюта для торговли с игроками на наших игровых серверах, 1 эйв = 100 токенам. Пополняйте баланс и становитесь круче на любимом сервере!:)</p>
+                        <p class="col-9 p-0">Токены — это валюта для торговли с игроками на наших игровых серверах, 1 эйв = 100 токенов. Пополняйте баланс и становитесь круче на любимом сервере!:)</p>
                     </div>
                 </div>
                 <div class="row px-3 px-sm-5 pb-4 pb-md-5 justify-content-center justify-content-md-start">
@@ -15,8 +15,8 @@
                         <v-select class="btn_common select mt-2" label="name" :filterable="false" :options="Object.values(this.servers).filter(server => server.ecomanager)" placeholder="Выберите сервер" v-model="selectedServer"></v-select>
 
                         <a href="#" :class="'btn_large success font-weight-bold mt-3 ' + (selectedServer && count > 0 ? '' : 'disabled')" @click.prevent="exchange">
-                            <span>Перевести эйвы</span>
-                            <small>Вы получите {{ Math.round(count * 100) }} токенов {{ selectedServer ? 'на сервере ' + selectedServer.name : '' }}</small>
+                            <span>Перевести токены</span>
+                            <small>Вы получите {{ Math.round(count * 100) }} токены {{ selectedServer ? 'на сервере ' + selectedServer.name : '' }}</small>
                         </a>
                     </div>
                 </div>

@@ -29,9 +29,30 @@
         </header>
 
         <router-view></router-view>
-
-        <footer>
-        
+	<footer>
+            <div class="promo_section">
+                <div class="wrapper">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-5 col-xl-6 text-center text-lg-left mr-xl-5">
+                            <h2>Набор модераторов</h2>
+                            <p>Нами был запущен набор модераторов на все сервера, оформите Вашу заявку и присоединяйтесь к нам!</p>
+                            <!--<h2>Получить ранний доступ</h2>
+                            <p>Скоро нами будет запущено закрытое бета-тестирование, оформите ранний доступ на него всего в два клика!</p>-->
+                        </div>
+                        <div class="col-12 col-lg-7 col-xl mt-5 mt-lg-0 ml-xl-5">
+                            <router-link class="row promo_box align-items-center text-center text-sm-left" :to="{name: 'moderentry'}">
+                                <div class="col-12 col-sm-7">
+                                    <h3>Ждём Ваших заявок!</h3>
+                                    <p>Примкните к стражам порядка на любимом сервере прямо сейчас!</p>
+                                </div>
+                                <div class="col-12 col-sm mt-3 mt-sm-0 text-sm-right">
+                                    <div class="alt_button">Продолжить</div>
+                                </div>
+                            </router-link>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="footer_section">
                 <div class="wrapper">
                     <div class="row align-items-top text-center text-lg-left">
@@ -52,14 +73,21 @@
                                     <router-link :to="{name: 'page', params: {name: 'commands'}}">Команды</router-link>
                                     <router-link :to="{name: 'banlist'}">Банлист</router-link>
                                     <router-link :to="{name: 'page', params: {name: 'download'}}">Скачать лаунчер</router-link>
+                                    <router-link :to="{name: 'page', params: {name: 'agreement'}}">Публичная оферта</router-link>
 
-                                    <a href="https://vk.com/im?sel=-220451023" target="_blank">Техническая поддержка</a>
+                                    <a href="https://vk.com/im?sel=-220451023" target="_blank">Поддержка</a>
                                 </p>
-                                <p>© Ave MC {{ moment().format('Y') }}.</p>
+				<p>ИП Шакуро М.В. ИНН: 673104102099 ОГРНИП: 322673300022765 Почта: support@avemc.ru</p>
+				<p><!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=94127045&amp;from=informer" target="_blank" rel="nofollow" class="banner"><img src="https://informer.yandex.ru/informer/94127045/3_1_C642FFFF_A622EAFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="94127045" data-lang="ru" /></a> <!-- /Yandex.Metrika informer --></p>
                             </div>
                         </div>
                         <div class="col-12 col-lg-2 text-lg-right">
-                             <!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=94127045&amp;from=informer" target="_blank" rel="nofollow" class="banner"><img src="https://informer.yandex.ru/informer/94127045/3_1_C642FFFF_A622EAFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="94127045" data-lang="ru" /></a> <!-- /Yandex.Metrika informer -->
+                            <p>
+                              <a href="#" class="banner">
+                                  <img src="/assets/img/payver.svg" class="banner__item--vertical">
+                                  <img src="/assets/img/payhor.svg" class="banner__item--horizontal">
+                              </a>
+                            </p>
                         </div>
                     </div>
                 </div>

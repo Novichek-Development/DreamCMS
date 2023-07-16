@@ -25,27 +25,6 @@
                     </div>
                 </div>
             </div>
-            <div class="row section text-center text-sm-left" v-else>
-                <div class="col-12 col-md-6 col-lg-12 col-xl-6">
-                    <i class="big fab fa-vk"></i>
-                    <h3>Восстановить доступ при помощи соц-сетей</h3>
-                    <p>Вы предусмотрительно привязали Ваш аккаунт к соц-сетям?</p>
-                    <p class="mb-2">Знайте, Вы — большой молодец, и благодаря этому Вы теперь можете всего в пару кликов восстановить свой аккаунт, выбрав сервис ниже!</p>
-
-                    <vue-telegram-login v-if="hotfix"
-                        mode="redirect"
-                        telegram-login="dreamcms_bot"
-                        :redirect-url="url('/oauth/recovery/telegram')"
-                        userpic
-                        radius="5"
-                        requestAccess="write"
-                    />
-
-                    <a :href="getIntegrationURL('vkontakte', 'recovery')" class="btn_common info mt-2" style="font-size: 28px"><i class="fab fa-vk"></i></a>
-                    <a :href="getIntegrationURL('discord', 'recovery')" class="btn_common info mt-2" style="font-size: 28px"><i class="fab fa-discord"></i></a>
-                    <a :href="getIntegrationURL('yandex', 'recovery')" class="btn_common info mt-2" style="font-size: 28px"><i class="fab fa-yandex"></i></a>
-                    <a :href="getIntegrationURL('steam', 'recovery')" class="btn_common info mt-2" style="font-size: 28px"><i class="fab fa-steam"></i></a>
-                </div>
                 <div class="col-12 col-md-6 col-lg-12 col-xl-6">
                     <i class="big fas fa-at"></i>
                     <h3>Восстановить доступ через электронную почту</h3>

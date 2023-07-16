@@ -37,7 +37,7 @@
                         <div class="row justify-content-center">
                             <p class="col-12 col-md-9 p-0">Все комплекты с игровыми предметами разграничены, для каждого сервера предусмотрен собственный уникальный состав вещей, обратите на это внимание!</p>
                             <p class="col-12 mt-3">
-                                <a href="#" class="btn_common primary" @click.prevent="buyKit(kit)">Купить за {{ kit.price }} стримов</a>
+                                <a href="#" class="btn_common primary" @click.prevent="buyKit(kit)">Купить за {{ kit.price }} эйвов</a>
                             </p>
                         </div>
                     </div>

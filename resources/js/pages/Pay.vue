@@ -22,6 +22,7 @@
                     <span>Пополнить баланс</span>
                     <small>Мобильные операторы, WebMoney, QIWI, PayPal</small>
                 </a>
+
             </div>
         </div>
     </div>
@@ -68,15 +69,7 @@
                     this.sum = parseInt(this.$route.query.sum);
                 }
             },
-            skinpay(){
-                api.post('pay/skinpay', {
-                    account: this.user.uuid,
-                }).then(response => {
-                    if (response.data.url){
-                        window.location = response.data.url;
-                    }
-                });
-            },
+
             obmenka(){
                 api.post('pay/obmenka', {
                     account: this.user.uuid,

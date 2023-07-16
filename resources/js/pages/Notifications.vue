@@ -59,7 +59,7 @@
                     </span>
 
                     <span v-if="notify.type === 'App\\Notifications\\BalanceAdd'">
-                        Ваш баланс успешно пополнен на {{ notify.data.sum }} {{ declOfNum(notify.data.sum, ['стрим', 'стрима', 'стримов']) }}!
+                        Ваш баланс успешно пополнен на {{ notify.data.sum }} {{ declOfNum(notify.data.sum, ['эйв', 'эйва', 'эйвов']) }}!
                     </span>
 
                     <span v-if="notify.type === 'App\\Notifications\\ChangePasswordNotify'">
