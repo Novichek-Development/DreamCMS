@@ -65,7 +65,7 @@
                     <p class="other">Случилось нечто непредвиденное и Вы не можете восстановить доступ к Вашему аккаунту? Обратитесь в нашу группу ВКонтакте, где администрация проекта поможет Вам решить все возникшие проблемы.</p>
                 </div>
                 <div class="col-12">
-                    <a href="https://vk.me/vk" class="btn_large primary d-inline-block">
+                    <a href="https://vk.me/avemc" class="btn_large primary d-inline-block">
                         <span>Группа ВКонтакте</span>
                         <small>Техническая поддержка 24/7</small>
                     </a>

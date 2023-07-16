@@ -22,10 +22,6 @@
                     <span>Пополнить баланс</span>
                     <small>Мобильные операторы, WebMoney, QIWI, PayPal</small>
                 </a>
-
-                <a href="#" class="btn_large dark" @click.prevent="skinpay">
-                    <small>Пополнить скинами через SkinPay</small>
-                </a>
             </div>
         </div>
     </div>

@@ -103,7 +103,7 @@
                                 </small>
                             </div>
                         </div>
-                        <!--<div class="col-12 col-md-6 col-xl-12 mt-3">
+                        <div class="col-12 col-md-6 col-xl-12 mt-3">
                             <div class="info">
                                 <h4>
                                     Достижения<span class="count">0 из 56</span>
@@ -122,7 +122,7 @@
                                 <small class="d-block mt-2" v-if="myProfile">Ваш профиль ещё никто не посетил.</small>
                                 <small class="d-block mt-1" v-else>Список последних посетителей пуст.</small>
                             </div>
-                        </div>-->
+                        </div>
                     </div>
                 </div>
             </div>

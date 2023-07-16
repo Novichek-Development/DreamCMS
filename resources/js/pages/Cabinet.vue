@@ -34,12 +34,12 @@
                 <div class="col-12 col-lg-4 col-xl-5">
                     <div class="row balance mx-0 mt-4 mt-lg-0">
                         <a href="#" class="col-12 col-md col-lg-12 streams" @click.prevent="openModal('balance')">
-                            <h4>{{ readableNum(Math.round(user.realmoney)) }}<small>СТРИМОВ</small></h4>
+                            <h4>{{ readableNum(Math.round(user.realmoney)) }}<small>ЭЙВОВ</small></h4>
                             <p>Нажмите сюда и пополните Ваш счёт всего в несколько кликов мыши!</p>
                         </a>
                         <a href="#" class="col-12 col-md col-lg-12 mt-4 mt-md-0 ml-0 ml-md-4 ml-lg-0 mt-lg-4 coins" @click.prevent="openModal('exchange')">
-                            <h4>Пополнить коины</h4>
-                            <p>Пополните баланс коинов и станьте лучшим на любом из серверов!</p>
+                            <h4>Пополнить токены</h4>
+                            <p>Пополните баланс токенов и станьте лучшим на любом из серверов!</p>
                         </a>
                     </div>
                 </div>

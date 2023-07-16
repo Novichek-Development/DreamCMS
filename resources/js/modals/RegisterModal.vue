@@ -6,7 +6,7 @@
                     <div class="col-12 col-sm-9">
                         <div class="header">
                             <h2>Регистрация</h2>
-                            <p>Что-то пошло не так? Сообщите об этом в нашу <a href="https://vk.com/vk" target="_blank">группу ВКонтакте</a> и мы оперативно поможем Вам решить проблему!</p>
+                            <p>Что-то пошло не так? Сообщите об этом в нашу <a href="https://vk.com/avemc" target="_blank">группу ВКонтакте</a> и мы оперативно поможем Вам решить проблему!</p>
                         </div>
                         <div class="body">
                             <div class="row">

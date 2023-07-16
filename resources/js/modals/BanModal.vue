@@ -11,7 +11,7 @@
                     <a href="#" class="btn_large dark mt-4" @click.prevent="buyUnban" v-if="bans[0].price">
                         <span>Платный разбан за {{ bans[0].price }} руб</span>
                     </a>
-                    <a href="https://vk.com/vk" class="btn_large dark mt-4" v-else>
+                    <a href="https://vk.com/avemc" class="btn_large dark mt-4" v-else>
                         <span>Платный разбан</span>
                     </a>
                 </div>

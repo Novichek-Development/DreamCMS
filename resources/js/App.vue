@@ -10,7 +10,7 @@
                 <div class="row align-items-center">
                     <div class="col-12 col-xl-6 text-center text-xl-left">
                         <div v-if="this.isLogged">
-                            <h1>Добро пожаловать, дорогой игрок, рады видеть тебя снова!</h1>
+                            <h1>Играй и зарабатывай!</h1>
                             <p>Следи за обновлениями в группе ВКонтакте и на сайте, а также общайтесь в нашем Discord!</p>
                         </div>
                         <div v-else>
@@ -21,7 +21,7 @@
                     <div class="col text-right d-none d-xl-block text-right">
                         <div class="row m-0 justify-content-end">
                             <div id="vk_groups" class="mr-3"></div>
-                            <iframe src="https://discordapp.com/widget?id=1&theme=dark" width="285" height="403" allowtransparency="true" frameborder="0"></iframe>
+                            <iframe src="https://discord.com/widget?id=1103819135961530378&theme=dark" width="285" height="403" allowtransparency="true" frameborder="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -31,29 +31,7 @@
         <router-view></router-view>
 
         <footer>
-            <div class="promo_section">
-                <div class="wrapper">
-                    <div class="row align-items-center">
-                        <div class="col-12 col-lg-5 col-xl-6 text-center text-lg-left mr-xl-5">
-                            <h2>Набор модераторов</h2>
-                            <p>Нами был запущен набор модераторов на все сервера, оформите Вашу заявку и присоединяйтесь к нам!</p>
-                            <!--<h2>Получить ранний доступ</h2>
-                            <p>Скоро нами будет запущено закрытое бета-тестирование, оформите ранний доступ на него всего в два клика!</p>-->
-                        </div>
-                        <div class="col-12 col-lg-7 col-xl mt-5 mt-lg-0 ml-xl-5">
-                            <router-link class="row promo_box align-items-center text-center text-sm-left" :to="{name: 'moderentry'}">
-                                <div class="col-12 col-sm-7">
-                                    <h3>Ждём Ваших заявок!</h3>
-                                    <p>Примкните к стражам порядка на любимом сервере прямо сейчас!</p>
-                                </div>
-                                <div class="col-12 col-sm mt-3 mt-sm-0 text-sm-right">
-                                    <div class="alt_button">Продолжить</div>
-                                </div>
-                            </router-link>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
             <div class="footer_section">
                 <div class="wrapper">
                     <div class="row align-items-top text-center text-lg-left">
@@ -62,10 +40,10 @@
                         </div>
                         <div class="col my-4 my-lg-0">
                             <router-link class="link" :to="{name: 'page', params: {name: 'team'}}">Команда проекта</router-link>
-                            <router-link class="link" :to="{name: 'page', params: {name: 'team'}}">Обратная связь</router-link>
+                            <router-link class="link" :to="{name: 'page', params: {name: 'feedback'}}">Обратная связь</router-link>
 
-                            <a href="https://vk.com/vk" class="link" target="_blank">Мы ВКонтакте</a>
-                            <a href="https://discordapp.com/invite/SDxzbAc" class="link" target="_blank">Наш Discord</a>
+                            <a href="https://vk.com/avemc" class="link" target="_blank">Мы ВКонтакте</a>
+                            <a href="https://discord.gg/g75VWp5PKW" class="link" target="_blank">Наш Discord</a>
                             <div class="sub_line">
                                 <p>
                                     <router-link :to="{name: 'forum'}">Форум</router-link>
@@ -75,15 +53,13 @@
                                     <router-link :to="{name: 'banlist'}">Банлист</router-link>
                                     <router-link :to="{name: 'page', params: {name: 'download'}}">Скачать лаунчер</router-link>
 
-                                    <a href="https://vk.com/im?sel=-120127301" target="_blank">Техническая поддержка</a>
+                                    <a href="https://vk.com/im?sel=-220451023" target="_blank">Техническая поддержка</a>
                                 </p>
-                                <p>© DreamCMS 2011 - {{ moment().format('Y') }}.</p>
+                                <p>© Ave MC {{ moment().format('Y') }}.</p>
                             </div>
                         </div>
                         <div class="col-12 col-lg-2 text-lg-right">
-                            <a href="#" class="banner">
-                                <img src="/assets/img/metrika.png" width="88" height="31">
-                            </a>
+                             <!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=94127045&amp;from=informer" target="_blank" rel="nofollow" class="banner"><img src="https://informer.yandex.ru/informer/94127045/3_1_C642FFFF_A622EAFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="94127045" data-lang="ru" /></a> <!-- /Yandex.Metrika informer -->
                         </div>
                     </div>
                 </div>
@@ -121,7 +97,7 @@
             initVK(){
                 this.$nextTick(function () {
                     if (!this.vkInitialized){
-                        VK.Widgets.Group("vk_groups", {mode: 4, no_cover: 1,  width: "285", height: "400", color1: '353535', color2: 'FFF', color3: 'a6a6a6'}, 20003922);
+                        VK.Widgets.Group("vk_groups", {mode: 4, no_cover: 1,  width: "285", height: "400", color1: '353535', color2: 'FFF', color3: 'a6a6a6'}, 220451023);
                     }
                 });
             }

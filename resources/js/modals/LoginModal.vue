@@ -6,7 +6,7 @@
                     <div class="col-12 col-sm-9">
                         <div class="header">
                             <h2>Авторизация</h2>
-                            <p>Что-то пошло не так? Сообщите об этом в нашу <a target="_blank" href="https://vk.com/vk">группу ВКонтакте</a> и мы оперативно поможем Вам решить проблему!</p>
+                            <p>Что-то пошло не так? Сообщите об этом в нашу <a target="_blank" href="https://vk.com/avemc">группу ВКонтакте</a> и мы оперативно поможем Вам решить проблему!</p>
                         </div>
                         <div class="body">
                             <div class="row align-items-center">

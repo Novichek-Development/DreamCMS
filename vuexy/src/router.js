@@ -14,7 +14,7 @@ const Online = () => import('./views/Online')
 const RCON = () => import('./views/chat/Chat')
 const Logs = () => import('./views/Logs')
 const ForumManager = ComingSoon
-const ModerEntry = ComingSoon
+const ModerEntry = () => import('./views/ModerEntry')
 
 /* const Dashboard = () => import('./views/Dashboard');
 const DashboardProfit = () => import('./views/DashboardProfit');

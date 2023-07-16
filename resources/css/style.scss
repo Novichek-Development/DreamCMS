@@ -801,7 +801,7 @@ footer .footer_section a,
           content:unset!important;
         }
         .logo{
-          background-image:url("https://via.placeholder.com/197x60");
+          background-image:url("../img/logo.png");
         }
       }
     }
@@ -814,6 +814,9 @@ footer .footer_section a,
 
     h1{
       font-size: 54px;
+    }
+    p{
+      color: #ffffff;
     }
   }
   #middle{
@@ -1893,7 +1896,7 @@ footer .footer_section a,
   }
   nav{
     .logo{
-      background-image:url('https://via.placeholder.com/197x60')
+      background-image:url('../img/logo.png')
     }
     .link{
       color:#fff;
@@ -1924,7 +1927,7 @@ footer .footer_section a,
     content:unset;
   }
   nav  .logo{
-    background-image:url('https://via.placeholder.com/197x60')
+    background-image:url('../img/logo.png')
   }
   nav .dropdown{
     &:hover .link,

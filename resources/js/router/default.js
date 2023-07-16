@@ -50,7 +50,7 @@ export default [
             component: News,
             name: 'news',
             meta: {
-               title: 'DreamCMS | Новости',
+               title: 'AveMC | Сервера с модами',
                metaTags: [
                   {
                      name: 'description',
