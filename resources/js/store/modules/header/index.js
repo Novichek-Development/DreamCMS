@@ -9,41 +9,16 @@ const state = {
                 cols: [
                     [
                         {
-                            title: 'Сервера 1.7.10',
-                            child: [
-                                {title: 'SandBox', to: {name: 'page', params: {name: 'sandbox'}}},
-                                {title: 'NanoTech', to: {name: 'page', params: {name: 'nanotech'}}},
-                                {title: 'Galactic', to: {name: 'page', params: {name: 'galactic'}}},
-                                {title: 'TechnoMagic', to: {name: 'page', params: {name: 'technomagic'}}},
-                                {title: 'TechnoMagicSky', to: {name: 'page', params: {name: 'technomagicsky'}}},
-                                {title: 'Magic', to: {name: 'page', params: {name: 'magic'}}},
-                                {title: 'RPG', to: {name: 'page', params: {name: 'rpg'}}},
-                                {title: 'Regrowth', to: {name: 'page', params: {name: 'regrowth'}}},
-                                {title: 'GregTech', to: {name: 'page', params: {name: 'gregtech'}}}
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            title: 'Миниигры',
-                            child: [
-                                {title: 'MiniGames', to: {name: 'page', params: {name: 'minigames'}}},
-                            ]
-                        },
+                                    title: 'Сервера 1.16.5',
+                                    child: [
+                                        {title: 'Architechnica', to: {name: 'page', params: {name: 'technomagic'}}},
+                                    ]
+                                },
                         {
                             title: 'Сервера 1.12.2',
                             child: [
-                                {title: 'SandBox', to: {name: 'page', params: {name: 'sandbox-new'}}},
-                                {title: 'Magic', to: {name: 'page', params: {name: 'magic-new'}}},
-                                {title: 'NanoTech', to: {name: 'page', params: {name: 'nanotech-new'}}},
-                                {title: 'Pixelmon', to: {name: 'page', params: {name: 'pixelmon'}}},
-                            ]
-                        },
-                        {
-                            title: 'SurvivalMG',
-                            child: [
-                                {title: 'JediCraft', to: {name: 'page', params: {name: 'jedicraft'}}},
-                                {title: 'Z.O.N.A.', to: {name: 'page', params: {name: 'zona'}}},
+                                {title: 'Technology', to: {name: 'page', params: {name: 'nanotech'}}},
+                                {title: 'Mysterius', to: {name: 'page', params: {name: 'magic'}}}
                             ]
                         }
                     ],

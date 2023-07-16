@@ -53,7 +53,6 @@ class ShopItemsCrudController extends CrudController {
         $this->crud->addField([
             'name' => 'icon',
             'label' => "Ссылка на иконку",
-            'type' => 'browse'
         ]);
 
         $this->crud->addField([
