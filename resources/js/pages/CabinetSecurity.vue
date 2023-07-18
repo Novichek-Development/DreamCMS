@@ -31,7 +31,7 @@
 
                         <vue-telegram-login v-if="driver === 'telegram'"
                             mode="redirect"
-                            telegram-login="dreamcms_bot"
+                            telegram-login="AveSupportBot"
                             :redirect-url="url('/oauth/link/telegram')"
                             userpic
                             radius="5"
@@ -305,14 +305,14 @@
                     case 'discord':
                         return "#";
                     case 'vkontakte':
-                        return 'https://vk.com/id' + integration.ext_id;
+                        return 'https://vk.com/avemc' + integration.ext_id;
                     case 'steam':
                         return integration.data.user_raw.profileurl;
                     case 'mailru':
                     case 'yandex':
                         return '';
                     case 'telegram':
-                        return 'https://t.me/' + integration.data.nickname;
+                        return 'https://t.me/avemc' + integration.data.nickname;
                 }
             },
             getDriverName(driver){
