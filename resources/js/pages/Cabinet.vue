@@ -3,7 +3,7 @@
         <div class="headline">
             <div class="row">
                 <div class="col-12 col-lg-8 col-xl-7">
-                    <h2>Привет, {{ user.login }}!</h2>
+                    <h2>Приветствуем, {{ user.login }}!</h2>
                     <div class="section">
                         <div class="user_about">
                             <div class="user_pic" :style="'background-image:url(' + getHeadUrl(user.uuid) + ')'"></div>
@@ -27,7 +27,9 @@
                         <div class="user_help">
                             <router-link :to="{name: 'user', params: {login: user.login}}">Профиль форума</router-link>
                             <router-link :to="{name: 'shop'}">Магазин блоков</router-link>
-                            <a href="#" @click.prevent="modals.stuck = true">Я застрял!</a>
+                            <router-link :to="{name: 'download'}">Скачать лаунчер</router-link>
+                            <router-link :to="{name: 'security'}">Сменить пароль</router-link>
+                            <a href="#" @click.prevent="modals.stuck = true">Телепорт на спавн</a>
                         </div>
                     </div>
                 </div>
