@@ -9,7 +9,7 @@
                         </ul>
                     </div>
                     <div class="col-7 text-right">
-<!--                        <a href="#" class="btn_common mr-2 d-none d-md-inline-block">Новые публикации</a>-->
+<!--                        <a href="#" class="btn_common mr-2 d-none d-md-inline-block">Новые публикации (можно изменить редирект на поддомен forum.avemc.ru)</a>-->
                         <router-link :to="{name: 'forum_search'}" class="btn_common dark">Поиск... <i class="fas fa-search fa-sm ml-2"></i></router-link>
                     </div>
                 </div>

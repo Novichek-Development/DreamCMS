@@ -13,5 +13,5 @@ token = localStorage.getItem('api-token');
 if (token) {
     window.axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
 }else {
-    console.error('API access token not found!');
+    console.error('API токен доступа не найден!');
 }
