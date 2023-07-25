@@ -20,14 +20,9 @@
                 <div class="footer py-4">
                     <user-selector v-if="forFriend" class="mb-4" v-model="selectedUser"></user-selector>
 
-                    <a href="#" class="btn_large primary mb-2" @click.prevent="unitpay">
-                        <span>Пополнить баланс {{ selectedUser ? 'для ' + selectedUser.login : 'через:' }}</span>
-                        <small>Visa/MasterCard/Мир</small>
-                    </a>
-
                     <a href="#" class="btn_large primary mb-2" @click.prevent="freekassa">
                         <span>Пополнить баланс {{ selectedUser ? 'для ' + selectedUser.login : 'через:' }}</span>
-                        <small>Электронные платежи, Криптовалюта и др.</small>
+                        <small>Visa/MasterCard/Мир, Электронные платежи, Криптовалюта и др.</small>
                     </a>
 
                     <a href="#" class="dashed_link mt-3 mt-sm-2" @click.prevent="forFriend = !forFriend">{{ forFriend ? 'Или пополните свой аккаунт' : 'Или переведите выбранную сумму своему другу' }}</a>
