@@ -8,11 +8,11 @@
                 <div class="col-12 col-md-6 col-lg-5 col-xl-3 pl-lg-0">
                     <router-link :to="{name: 'page', params: {name: 'download'}}" class="btn_large primary mb-3" v-if="isLogged">
                         <span>Скачать лаунчер</span>
-                        <small>Начни игру всего в пару кликов!</small>
+                        <small>Начни играть всего в пару кликов!</small>
                     </router-link>
                     <router-link :to="{name: 'page', params: {name: 'start'}}" class="btn_large success mb-3" v-else>
                         <span>Начать играть!</span>
-                        <small>Начни игру всего в пару кликов!</small>
+                        <small>Начни играть всего в пару кликов!</small>
                     </router-link>
                     <div class="quarter mt-5">
                         <h3>Наши сервера</h3>
@@ -40,6 +40,9 @@
                                                 <div class="lot" v-else>N/A</div>
                                                 <div class="col-12 bar">
                                                     <div class="process" :style="'width: ' + ((server.online / server.maxonline) * 100) + '%;'"></div>
+
+
+                                                    <!-- нужна реализация мониторига как у StreamCraft !--> 
                                                 </div>
                                             </div>
                                         </div>
