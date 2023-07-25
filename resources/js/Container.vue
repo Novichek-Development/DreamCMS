@@ -8,11 +8,11 @@
                 <div class="col-12 col-md-6 col-lg-5 col-xl-3 pl-lg-0">
                     <router-link :to="{name: 'page', params: {name: 'download'}}" class="btn_large primary mb-3" v-if="isLogged">
                         <span>Скачать лаунчер</span>
-                        <small>Начните игру всего в пару кликов!</small>
+                        <small>Начни игру всего в пару кликов!</small>
                     </router-link>
                     <router-link :to="{name: 'page', params: {name: 'start'}}" class="btn_large success mb-3" v-else>
                         <span>Начать играть!</span>
-                        <small>Начните игру всего в пару кликов!</small>
+                        <small>Начни игру всего в пару кликов!</small>
                     </router-link>
                     <div class="quarter mt-5">
                         <h3>Наши сервера</h3>
@@ -30,7 +30,7 @@
                                                 <b>{{ branch.online }}</b> из {{ branch.maxonline }}
                                             </div>
 <!--                                            <div class="online" v-else>-->
-<!--                                                <b>Отключён</b>-->
+<!--                                                <b>N/A</b>-->
 <!--                                            </div>-->
                                         </div>
                                         <div class="branches" :style="'display: ' + (selected && selected === name ? 'block' : 'none') + ';'">
