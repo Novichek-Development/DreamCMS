@@ -3,7 +3,7 @@
         <div class="headline">
             <div class="row">
                 <div class="col-12 col-lg-8 col-xl-7">
-                    <h2>Приветствуем, {{ user.login }}!</h2>
+                    <h2>Алоха, {{ user.login }}!</h2>
                     <div class="section">
                         <div class="user_about">
                             <div class="user_pic" :style="'background-image:url(' + getHeadUrl(user.uuid) + ')'"></div>

@@ -46,7 +46,7 @@
                 <div class="col-12">
                     <a href="https://vk.me/avemc" class="btn_large primary d-inline-block">
                         <span>Группа ВКонтакте</span>
-                        <small>Техническая поддержка 24/7</small>
+                        <small>Техническая поддержка</small>
                     </a>
                 </div>
             </div>
