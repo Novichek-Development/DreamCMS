@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{jt2w:function(t,e,n){"use strict";n.r(e);var i={name:"WideContainer"},r=n("KHd+"),a=Object(r.a)(i,(function(){var t=this._self._c;return t("div",{attrs:{id:"middle"}},[t("div",{staticClass:"wrapper"},[t("router-view")],1)])}),[],!1,null,null,null);e.default=a.exports}}]);

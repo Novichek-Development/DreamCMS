@@ -12,17 +12,7 @@ package-lock.json
 _ide_helper.php
 
 mix-manifest.json
-chat_bans
-chat_history
-public/uploads
-public/assets
-public/js
-public/mix-manifest.json
-public/skins
-public/heads
-public/cloaks
-public/packages
-public/vendor
+
 
 #RoadRunner
 .rr.yml
