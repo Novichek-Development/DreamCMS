@@ -32,7 +32,7 @@ const state = {
                     {title: 'Скачать лаунчер', to: {name: 'page', params: {name: 'download'}}},
                     {title: 'Команды', to: {name: 'page', params: {name: 'commands'}}},
                     {title: 'Банлист', to: {name: 'banlist'}},
-                    {title: 'Стать модератором', to: {name: 'moderentry'}},
+                    {title: 'Хочу в команду!', to: {name: 'moderentry'}},
                     {title: 'Команда проекта', to: {name: 'page', params: {name: 'team'}}}
                 ]
             },
