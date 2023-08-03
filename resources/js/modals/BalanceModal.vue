@@ -92,21 +92,13 @@
               this.submit({method: 'POST', path: 'https://oplata.info/asp2/pay.asp', data: data});
             },
             unitpay(){
-                this.payment = new UnitPay();
-                this.payment.createWidget({
-                    publicKey: "441665-fe922",
-                    sum: this.sum,
+                api.post('pay/unitpay', {
                     account: this.selectedUser ? this.selectedUser.uuid : this.user.uuid,
-                    customerEmail: this.selectedUser ? this.selectedUser.email : this.user.email,
-                    desc: "Пополнение баланса игрока " + (this.selectedUser ? this.selectedUser.login : this.user.login),
-                    cashItems: [{"name":"Пополнение баланса игрока " + (this.selectedUser ? this.selectedUser.login : this.user.login), "count": 1, "price":this.sum, "type":"service"}],
-                    locale: "ru",
-                });
-                this.payment.success(function (params) {
-                    console.log('Успешный платеж');
-                });
-                this.payment.error(function (message, params) {
-                    console.log(message);
+                    sum: this.sum
+                }).then(response => {
+                    if (response.data.url){
+                        window.location = response.data.url;
+                    }
                 });
             },
             skinpay(){
