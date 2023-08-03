@@ -25,6 +25,7 @@ Route::get('/verify/{string}', "VerifyController@verify")->name('verify');
 // LEGACY
 Route::post('/cabinet/buygroup', "ProfileController@cabbuygroup");
 
+Route::post('/pay/unitpay', "\App\Http\Controllers\PaymentController@unitpay");
 Route::post('/pay/skinpay', "\App\Http\Controllers\PaymentController@skinpay");
 Route::post('/pay/enot', "\App\Http\Controllers\PaymentController@enot");
 Route::post('/pay/obmenka', "\App\Http\Controllers\PaymentController@obmenka");

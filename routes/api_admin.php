@@ -200,7 +200,7 @@ Route::group([
     });
 });
 
-//Route::prefix('admin')->middleware('auth:api')->namespace('Admin')->group(function (){
-//
-//});
+Route::prefix('admin')->middleware('auth:api')->namespace('Admin')->group(function (){
+
+});
 //

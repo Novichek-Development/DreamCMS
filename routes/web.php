@@ -1,5 +1,5 @@
 <?php
-Route::any('/payments/unitpay', "PaymentController@unitpay");
+Route::any('/payments/unitpay', "PaymentController@unitpaySuccess");
 Route::any('/payments/skinpay', "PaymentController@skinpaySuccess");
 Route::any('/payments/enot', "PaymentController@enotSuccess");
 Route::any('/payments/digiseller', "PaymentController@digiseller");
