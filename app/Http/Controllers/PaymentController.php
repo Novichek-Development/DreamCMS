@@ -595,6 +595,61 @@ class PaymentController extends Controller{
         }
     }
 
+    public function unitpaySuccess(Request $request){
+        $params    = $request->get('params');
+
+        $method    = $request->get('method');
+        $signature = $params['signature'];
+        $uuid      = $params['account'];
+        $count     = $params['orderSum'];
+
+        // Рекомендую включить если у вас нет прокси или настроен real-ip модуль
+
+        /*if (!in_array($request->ip(), ['31.186.100.49', '178.132.203.105', '52.29.152.23', '52.19.56.234', '94.130.70.247', '127.0.0.1'])){
+            return Response::json([
+                'error' => ['message' => 'Запрос не с IP системы (' . $request->ip() . ')!']
+            ]);
+        }*/
+
+        if ($signature != $this->getSignature($method, $params, config('settings.unitpay_secretkey', 'demo'))){
+            return Response::json([
+                'error' => ['message' => 'Неверная подпись запроса!']
+            ]);
+        }
+
+        if ($params['orderCurrency'] != 'RUB'){
+            return Response::json([
+                'error' => ['message' => 'Платежи принимаются только русскими рублями!']
+            ]);
+        }
+
+        if ($method == 'check'){
+            if ($user = User::fromUUID($uuid)){
+                return Response::json([
+                    'result' => ['message' => 'Успешная проверка!']
+                ]);
+            }
+            return Response::json([
+                'error' => ['message' => 'Такого игрока нет!']
+            ]);
+        }
+
+        if ($method == 'pay'){
+            if ($user = User::fromUUID($uuid)){
+                $this->success($user, $count, 'unitpay', $params);
+            }
+            return Response::json([
+                'error' => ['message' => 'Такого игрока нет или не удалось пополнить баланс! Обратитесь к администратору!']
+            ]);
+        }
+
+        if ($method == 'error'){
+            $error = $request->get('errorMessage');
+            return Response::make($error);
+        }
+    }
+
+
     protected function getSignature($method, array $params, $secretKey) {
         ksort($params);
         unset($params['sign']);
