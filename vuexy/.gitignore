@@ -1,4 +1,4 @@
-.DS_Store
+
 
 
 # local env files
@@ -22,7 +22,6 @@ yarn-error.log*
 !.vscode/*.code-snippets
 
 # script
-/vuexy-scripts
 
 # Docs
 /docs/.temp
