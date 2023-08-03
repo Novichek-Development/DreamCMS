@@ -106,3 +106,4 @@ fabric.properties
 .idea
 .idea/*
 public/assets/webfonts/fa-brands-400.svg
+public/assets/sprites/solid.svg
