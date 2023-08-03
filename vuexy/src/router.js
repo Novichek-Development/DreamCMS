@@ -14,7 +14,7 @@ const Online = () => import('./views/Online')
 const RCON = () => import('./views/chat/Chat')
 const Logs = () => import('./views/Logs')
 const ForumManager = ComingSoon
-const ModerEntry = () => import('./views/ModerEntry')
+const ModerEntry = ComingSoon
 
 /* const Dashboard = () => import('./views/Dashboard');
 const DashboardProfit = () => import('./views/DashboardProfit');
@@ -33,7 +33,7 @@ Vue.use(Router)
 
 const router = new Router({
   mode: 'history',
-  base: '/admin',
+  base: '/admin/dashboard',
   scrollBehavior() {
     return { x: 0, y: 0 }
   },
