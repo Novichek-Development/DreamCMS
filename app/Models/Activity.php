@@ -26,6 +26,17 @@ class Activity extends Eloquent
         ]);
     }
 
+    public static function isPayUnitpay(User $user, $action, $unitpayId, $where = []){
+        if (count(Activity::where(array_merge([
+                ['actor_type', '=', 'user'],
+                ['actor_id', '=', $user->id],
+                ['params', 'LIKE', '%'.'"unitpayId":"'.$unitpayId.'"'.'%']
+            ], $where))->get()) > 0) {
+		return true;
+	};
+	return false;
+    }
+
     public static function list_actions(User $user, $action, $where = []){
         return Activity::where(array_merge([
             'actor_type' => 'user',
@@ -73,11 +84,11 @@ class Activity extends Eloquent
             case 'exchange':
                 return 'Обмен валюты';
             case 'sendplayer':
-                return 'Передача стримов';
+                return 'Передача эйвов';
             case 'sendserver':
-                return 'Покупка стримов';
+                return 'Покупка эйвов';
             case 'sendsite':
-                return 'Перевод стримов';
+                return 'Перевод эйвов';
             case 'setprefix':
                 return 'Смена префикса';
             default:
