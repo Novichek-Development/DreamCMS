@@ -20,9 +20,14 @@
                 <div class="footer py-4">
                     <user-selector v-if="forFriend" class="mb-4" v-model="selectedUser"></user-selector>
 
+                    <a href="#" class="btn_large primary mb-2" @click.prevent="unitpay">
+                        <span>Пополнить баланс {{ selectedUser ? 'для ' + selectedUser.login : 'через:' }}</span>
+                        <small>Visa/MasterCard RUB, Мир</small>
+                    </a>
+
                     <a href="#" class="btn_large primary mb-2" @click.prevent="freekassa">
                         <span>Пополнить баланс {{ selectedUser ? 'для ' + selectedUser.login : 'через:' }}</span>
-                        <small>Visa/MasterCard/Мир, Электронные платежи, Криптовалюта и др.</small>
+                        <small>Visa/MasterCard UAH, Электронные платежи, Криптовалюта и др.</small>
                     </a>
 
                     <a href="#" class="dashed_link mt-3 mt-sm-2" @click.prevent="forFriend = !forFriend">{{ forFriend ? 'Или пополните свой аккаунт' : 'Или переведите выбранную сумму своему другу' }}</a>
@@ -89,10 +94,12 @@
             unitpay(){
                 this.payment = new UnitPay();
                 this.payment.createWidget({
-                    publicKey: "37321-6aa03",
+                    publicKey: "441665-fe922",
                     sum: this.sum,
                     account: this.selectedUser ? this.selectedUser.uuid : this.user.uuid,
+                    customerEmail: this.selectedUser ? this.selectedUser.email : this.user.email,
                     desc: "Пополнение баланса игрока " + (this.selectedUser ? this.selectedUser.login : this.user.login),
+                    cashItems: [{"name":"Пополнение баланса игрока " + (this.selectedUser ? this.selectedUser.login : this.user.login), "count": 1, "price":this.sum, "type":"service"}],
                     locale: "ru",
                 });
                 this.payment.success(function (params) {
