@@ -9,7 +9,7 @@ export const $themeBreakpoints = {}
 // APP CONFIG
 export const $themeConfig = {
   app: {
-    appName: 'DreamCMS',
+    appName: 'AveMC',
     // eslint-disable-next-line global-require
     appLogoImage: '/assets/logo.png',
   },
