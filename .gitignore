@@ -107,3 +107,4 @@ fabric.properties
 .idea/*
 public/assets/webfonts/fa-brands-400.svg
 public/assets/sprites/solid.svg
+public/assets/svgs/light/forward.svg
