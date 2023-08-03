@@ -542,57 +542,40 @@ class PaymentController extends Controller{
 
     // UNITPAY
     public function unitpay(Request $request){
-        $params    = $request->get('params');
+        $uuid = $request->get('account');
+        $sum = $request->get('sum');
 
-        $method    = $request->get('method');
-        $signature = $params['signature'];
-        $uuid      = $params['account'];
-        $count     = $params['orderSum'];
-
-        // Рекомендую включить если у вас нет прокси или настроен real-ip модуль
-
-        /*if (!in_array($request->ip(), ['31.186.100.49', '178.132.203.105', '52.29.152.23', '52.19.56.234', '94.130.70.247', '127.0.0.1'])){
-            return Response::json([
-                'error' => ['message' => 'Запрос не с IP системы (' . $request->ip() . ')!']
-            ]);
-        }*/
-
-        if ($signature != $this->getSignature($method, $params, config('settings.unitpay_secretkey', 'demo'))){
-            return Response::json([
-                'error' => ['message' => 'Неверная подпись запроса!']
-            ]);
+        if ($uuid){
+            $user = User::fromUUID($uuid);
+        }else{
+            $user = \Auth::user();
         }
 
-        if ($params['orderCurrency'] != 'RUB'){
-            return Response::json([
-                'error' => ['message' => 'Платежи принимаются только русскими рублями!']
-            ]);
-        }
+        $orderID = \DB::table('unitpay_orders')->insertGetId([
+            'user_id' => $user->id,
+            'sum' => $sum
+        ]);
 
-        if ($method == 'check'){
-            if ($user = User::fromUUID($uuid)){
-                return Response::json([
-                    'result' => ['message' => 'Успешная проверка!']
-                ]);
-            }
-            return Response::json([
-                'error' => ['message' => 'Такого игрока нет!']
-            ]);
-        }
+	$publickey = config('settings.unitpay_publickey', 'demo');
+	$secretkey = config('settings.unitpay_secretkey', 'demo');
+	$desc = "Пополнение баланса игрока " . $user->login;
+	$currency = 'RUB';
 
-        if ($method == 'pay'){
-            if ($user = User::fromUUID($uuid)){
-                $this->success($user, $count, 'unitpay', $params);
-            }
-            return Response::json([
-                'error' => ['message' => 'Такого игрока нет или не удалось пополнить баланс! Обратитесь к администратору!']
-            ]);
-        }
+	$signature = $this->getFormSignature($uuid, $currency, $desc, $sum, $secretkey);
 
-        if ($method == 'error'){
-            $error = $request->get('errorMessage');
-            return Response::make($error);
-        }
+	$data = [
+            'sum' => $sum,
+            'account' => $uuid,
+            'desc' => $desc,
+            'signature' => $signature,
+            'customerEmail' => $user->email,
+            'cashItems' => base64_encode(json_encode([["name" => $desc, "count" => 1, "price" => $sum, "type" => "service"]]))
+	];
+
+        return [
+            'success' => true,
+            'url' => 'https://unitpay.ru/pay/'.$publickey. '/card?' . http_build_query($data)
+        ];
     }
 
     public function unitpaySuccess(Request $request){
@@ -636,7 +619,17 @@ class PaymentController extends Controller{
 
         if ($method == 'pay'){
             if ($user = User::fromUUID($uuid)){
-                $this->success($user, $count, 'unitpay', $params);
+                if (Activity::isPayUnitpay($user, 'balance_add', $params['unitpayId'])) {
+                    return Response::json([
+                        'result' => ['message' => 'Запрос успешно обработан']
+                    ]);
+                }
+                if ($this->success($user, $count, 'unitpay', $params)) {
+                    return Response::json([
+                        'result' => ['message' => 'Оплата зачислена']
+                    ]);
+
+                };
             }
             return Response::json([
                 'error' => ['message' => 'Такого игрока нет или не удалось пополнить баланс! Обратитесь к администратору!']
@@ -649,6 +642,10 @@ class PaymentController extends Controller{
         }
     }
 
+    function getFormSignature($account, $currency, $desc, $sum, $secretKey) {
+        $hashStr = $account.'{up}'/*.$currency.'{up}'*/.$desc.'{up}'.$sum.'{up}'.$secretKey;
+        return hash('sha256', $hashStr);
+    }
 
     protected function getSignature($method, array $params, $secretKey) {
         ksort($params);
