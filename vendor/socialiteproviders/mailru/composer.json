@@ -1,0 +1,33 @@
+{
+    "name": "socialiteproviders/mailru",
+    "description": "Mail.ru OAuth2 Provider for Laravel Socialite",
+    "keywords": [
+        "laravel",
+        "mailru",
+        "oauth",
+        "provider",
+        "socialite"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergey Panteleev",
+            "email": "sergey@php.net"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-json": "*",
+        "socialiteproviders/manager": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SocialiteProviders\\Mailru\\": ""
+        }
+    },
+    "support": {
+        "issues": "https://github.com/socialiteproviders/providers/issues",
+        "source": "https://github.com/socialiteproviders/providers",
+        "docs": "https://socialiteproviders.com/mailru"
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "name": "spiral/roadrunner-laravel",
+    "type": "library",
+    "description": "RoadRunner bridge for Laravel applications",
+    "keywords": [
+        "laravel",
+        "bridge",
+        "roadrunner"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tarampampam",
+            "homepage": "https://github.com/tarampampam"
+        }
+    ],
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "ext-mbstring": "*",
+        "illuminate/contracts": "~6.0 || ~7.0 || ~8.0",
+        "illuminate/support": "~6.0 || ~7.0 || ~8.0",
+        "illuminate/http": "~6.0 || ~7.0 || ~8.0",
+        "illuminate/routing": "~6.0 || ~7.0 || ~8.0",
+        "spiral/roadrunner": "~1.8",
+        "symfony/psr-http-message-bridge": "^1.2 || ^2.0",
+        "laminas/laminas-diactoros": "^2"
+    },
+    "require-dev": {
+        "ext-pdo": "*",
+        "ext-pdo_sqlite": "*",
+        "ext-sqlite3": "*",
+        "laravel/laravel": "~6.0 || ~7.0 || ~8.0",
+        "mockery/mockery": "^1.3.2",
+        "phpstan/phpstan": "~0.12.34",
+        "phpunit/phpunit": "^8.0 || ^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Spiral\\RoadRunnerLaravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Spiral\\RoadRunnerLaravel\\Tests\\": "tests/"
+        }
+    },
+    "bin": [
+        "bin/rr-worker"
+    ],
+    "scripts": {
+        "phpunit": "@php ./vendor/bin/phpunit --no-coverage --colors=always",
+        "phpunit-cover": "@php ./vendor/bin/phpunit",
+        "phpstan": "@php ./vendor/bin/phpstan analyze -c ./phpstan.neon.dist --no-progress --ansi",
+        "test": [
+            "@phpstan",
+            "@phpunit"
+        ],
+        "test-cover": [
+            "@phpstan",
+            "@phpunit-cover"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Spiral\\RoadRunnerLaravel\\ServiceProvider"
+            ]
+        }
+    },
+    "suggest": {
+        "illuminate/redis": "Required for dropping redis connections",
+        "illuminate/database": "Required for dropping database connections",
+        "avto-dev/stacked-dumper-laravel": "Stacked variables dumper for Laravel-based application"
+    },
+    "support": {
+        "issues": "https://github.com/spiral/roadrunner-laravel/issues",
+        "source": "https://github.com/spiral/roadrunner-laravel"
+    }
+}
