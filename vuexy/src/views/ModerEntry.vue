@@ -134,7 +134,7 @@
     import UserSelector from "../components/UserSelector";
     import DateRangePicker from '../components/DateRangePicker';
 
-    import api from 'Api';
+    import api from '../api';
     import moment from 'moment';
 
     import { mapGetters } from 'vuex';
