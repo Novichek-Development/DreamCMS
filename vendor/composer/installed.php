@@ -47,12 +47,12 @@
             'dev_requirement' => false,
         ),
         'aws/aws-sdk-php' => array(
-            'pretty_version' => '3.275.2',
-            'version' => '3.275.2.0',
+            'pretty_version' => '3.275.7',
+            'version' => '3.275.7.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../aws/aws-sdk-php',
             'aliases' => array(),
-            'reference' => '4506d631caf6097fd73009d57707e61b95efe92c',
+            'reference' => '54dcef3349c81b46c0f5f6e54b5f9bfb5db19903',
             'dev_requirement' => false,
         ),
         'backpack/crud' => array(
@@ -164,12 +164,12 @@
             'dev_requirement' => true,
         ),
         'barryvdh/reflection-docblock' => array(
-            'pretty_version' => 'v2.1.0',
-            'version' => '2.1.0.0',
+            'pretty_version' => 'v2.1.1',
+            'version' => '2.1.1.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../barryvdh/reflection-docblock',
             'aliases' => array(),
-            'reference' => 'bf44b757feb8ba1734659029357646466ded673e',
+            'reference' => 'e6811e927f0ecc37cc4deaa6627033150343e597',
             'dev_requirement' => true,
         ),
         'beshelmek/laravel-roadrunner' => array(
@@ -439,12 +439,12 @@
             'dev_requirement' => false,
         ),
         'filp/whoops' => array(
-            'pretty_version' => '2.15.2',
-            'version' => '2.15.2.0',
+            'pretty_version' => '2.15.3',
+            'version' => '2.15.3.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../filp/whoops',
             'aliases' => array(),
-            'reference' => 'aac9304c5ed61bf7b1b7a6064bf9806ab842ce73',
+            'reference' => 'c83e88a30524f9360b11f585f71e6b17313b7187',
             'dev_requirement' => true,
         ),
         'funnyitselmo/minecraftserverstatus' => array(
@@ -858,12 +858,12 @@
             'dev_requirement' => false,
         ),
         'laravel/socialite' => array(
-            'pretty_version' => 'v5.6.3',
-            'version' => '5.6.3.0',
+            'pretty_version' => 'v5.7.0',
+            'version' => '5.7.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laravel/socialite',
             'aliases' => array(),
-            'reference' => '00ea7f8630673ea49304fc8a9fca5a64eb838c7e',
+            'reference' => 'f5996f499e14db15407201a6bfbaba3ce6ce736c',
             'dev_requirement' => false,
         ),
         'laravel/tinker' => array(
@@ -1179,12 +1179,12 @@
             ),
         ),
         'php-http/discovery' => array(
-            'pretty_version' => '1.19.0',
-            'version' => '1.19.0.0',
+            'pretty_version' => '1.19.1',
+            'version' => '1.19.1.0',
             'type' => 'composer-plugin',
             'install_path' => __DIR__ . '/../php-http/discovery',
             'aliases' => array(),
-            'reference' => '1856a119a0b0ba8da8b5c33c080aa7af8fac25b4',
+            'reference' => '57f3de01d32085fea20865f9b16fb0e69347c39e',
             'dev_requirement' => false,
         ),
         'php-http/httplug' => array(
@@ -1311,12 +1311,12 @@
             'dev_requirement' => true,
         ),
         'phpunit/phpunit' => array(
-            'pretty_version' => '9.6.9',
-            'version' => '9.6.9.0',
+            'pretty_version' => '9.6.10',
+            'version' => '9.6.10.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpunit/phpunit',
             'aliases' => array(),
-            'reference' => 'a9aceaf20a682aeacf28d582654a1670d8826778',
+            'reference' => 'a6d351645c3fe5a30f5e86be6577d946af65a328',
             'dev_requirement' => true,
         ),
         'pragmarx/google2fa' => array(
@@ -1415,8 +1415,8 @@
         'psr/http-client-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
+                0 => '1.0',
+                1 => '*',
             ),
         ),
         'psr/http-factory' => array(
@@ -1431,9 +1431,9 @@
         'psr/http-factory-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
-                2 => '^1.0',
+                0 => '1.0',
+                1 => '^1.0',
+                2 => '*',
             ),
         ),
         'psr/http-message' => array(
@@ -1448,8 +1448,8 @@
         'psr/http-message-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
+                0 => '1.0',
+                1 => '*',
             ),
         ),
         'psr/log' => array(
@@ -1464,8 +1464,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'psr/simple-cache' => array(
