@@ -1,10 +1,6 @@
 const state = {
         menu: [
             {
-                title: 'Форум',
-                to: {name: 'forum'}
-            },
-            {
                 title: 'Наши сервера',
                 cols: [
                     [
