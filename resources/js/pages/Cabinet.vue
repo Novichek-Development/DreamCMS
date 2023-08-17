@@ -27,7 +27,7 @@
                         <div class="user_help">
                             <router-link :to="{name: 'user', params: {login: user.login}}">Профиль форума</router-link>
                             <router-link :to="{name: 'shop'}">Магазин блоков</router-link>
-                            <router-link :to="{name: 'download'}">Скачать лаунчер</router-link>
+                            <router-link :to="{name: 'page/download'}">Скачать лаунчер</router-link>
                             <router-link :to="{name: 'security'}">Сменить пароль</router-link>
                             <a href="#" @click.prevent="modals.stuck = true">Телепорт на спавн</a>
                         </div>
