@@ -89,10 +89,32 @@
                     </ul>
                 </a>
             </div>
-            <div class="col-12 col-sm-6 col-lg-6 col-xl-4 mt-3 mt-xl-0">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl mt-3 mt-lg-0">
                 <a href="#" :class="'privilege legend ' + (selectedGroup === 'Legend' ? 'checked' : '')" @click.prevent="selectedGroup = 'Legend'">
                     <h5>LEGEND</h5>
                     <p>{{ getDonateGroup('Legend').price }} ЭЙВОВ</p>
+                    <ul>
+                        <li>
+                            <b>+10</b> регионов по<br>
+                            <b>600 тысяч</b> блоков<br>
+                            <b>Доступны все флаги</b>
+                        </li>
+                        <li>
+                            Набор ресурсов<br>
+                            уровня <b>LEGEND</b>
+                        </li>
+                        <li><b>+30</b> игровых команд</li>
+                        <li>Скин и плащ в <b>HD</b></li>
+                        <li>Полная настройка префикса и суффикса</li>
+                        <li><b>Все возможности привилегии DELUXE</b></li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-6 col-xl-4 mt-3 mt-xl-0">
+                <a href="#" :class="'privilege vanilla ' + (selectedGroup === 'Vanilla' ? 'checked' : '')" @click.prevent="selectedGroup = 'Vanilla'">
+                    <h5>LEGEND</h5>
+                    <p>{{ getDonateGroup('Vanilla').price }} ЭЙВОВ</p>
                     <ul>
                         <li>
                             <b>+10</b> регионов по<br>
