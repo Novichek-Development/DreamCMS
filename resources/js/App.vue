@@ -21,7 +21,7 @@
                     <div class="col text-right d-none d-xl-block text-right">
                         <div class="row m-0 justify-content-end">
                             <div id="vk_groups" class="mr-3"></div>
-                            <iframe src="https://discord.com/widget?id=1103819135961530378&theme=dark" width="285" height="403" allowtransparency="true" frameborder="0"></iframe>
+                            <iframe src="https://discord.com/widget?id=1170248477251485706&theme=dark" width="285" height="403" allowtransparency="true" frameborder="0"></iframe>
                         </div>
                     </div>
                 </div>
