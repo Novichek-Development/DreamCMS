@@ -11,7 +11,7 @@
         </div>
         <div class="row resource_kits justify-content-center">
             <div class="col-12 col-sm-6 col-md-4 col-lg mb-3" v-for="kit in kits">
-                <a href="#" :class="kit.name" @click.prevent="openKit(kit)">
+                <a href="#" :class="kit.css" @click.prevent="openKit(kit)">
                     <h5>
                         <small>Набор ресурсов</small>
                         {{ kit.name }}
