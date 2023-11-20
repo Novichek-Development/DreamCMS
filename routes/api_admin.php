@@ -186,6 +186,15 @@ Route::group([
         //CRUD::resource('/raw', 'ModerEntryCrudController');
     });
 
+    Route::prefix('waitlist')->group(function (){
+        Route::post('search', 'WaitlistEntryController@search');
+        Route::post('status', 'WaitlistEntryController@updateStatus');
+        Route::post('comment', 'WaitlistEntryController@updateComment');
+        Route::post('logs', 'WaitlistEntryController@logs');
+        //CRUD::resource('/raw', 'WaitlistEntryCrudController');
+    });
+
+
     // ACL
 
     Route::prefix('acl')->group(function (){

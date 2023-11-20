@@ -5,7 +5,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web']], function () {
     Route::get('/{any}', 'AdminController@layout')->where('any', '.*');
 });
 
-/* Route::group(['namespace' => 'Admin', 'prefix' => 'admin_old', 'middleware' => ['web', 'admin']], function () {
+/*Route::group(['namespace' => 'Admin', 'prefix' => 'admin_old', 'middleware' => ['web', 'admin']], function () {
     //USER & PERMISSIONS
     CRUD::resource('user', 'UserCrudController');
     CRUD::resource('permission', 'PermissionCrudController');
@@ -214,6 +214,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web']], function () {
     
     //RCON
     Route::prefix('rcon')->group(function (){
-       Route::get('/', 'RconController@index');
+        Route::get('/', 'RconController@index');
         Route::post('send', 'RconController@cmd');
     });
+});*/

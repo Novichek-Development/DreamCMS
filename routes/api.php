@@ -198,6 +198,13 @@ Route::prefix('moder')->middleware('auth')->group(function (){
     Route::post('delete', "FeedbackController@moder_delete")->middleware('auth');
 });
 
+Route::prefix('waitlist')->middleware('auth')->group(function (){
+    Route::get('load', "WaitlistController@moder")->middleware('auth');
+    Route::post('send', "WaitlistController@moder_accept")->middleware('auth');
+    Route::post('delete', "WaitlistController@moder_delete")->middleware('auth');
+});
+
+
 Route::prefix('ban')->middleware('auth')->group(function (){
     Route::get('list', "ProfileController@banlist");
 });
