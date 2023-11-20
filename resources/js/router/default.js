@@ -30,6 +30,7 @@ const Pay = () => import("../pages/Pay");
 
 const ModerEntry = () => import("../pages/ModerEntry");
 
+const WaitlistEntry = () => import("../pages/WaitlistEntry");
 const Forum = () => import("../pages/Forum");
 const ForumCategory = () => import("../pages/ForumCategory");
 const ForumCreate = () => import('../pages/ForumCreate');
@@ -103,6 +104,15 @@ export default [
             meta: {
                auth: true,
                title: 'Заявка в модераторы'
+            },
+         },
+         {
+            path: '/waitlist/entry',
+            component: WaitlistEntry,
+            name: 'waitlistentry',
+            meta: {
+               auth: true,
+               title: 'Приватные сервера'
             },
          },
          {
