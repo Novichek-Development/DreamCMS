@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>DreamCMS | Admin</title>
+    <title>XINBOSHIN | Admin</title>
     <link rel="stylesheet" href="/assets/vuexy/css/core.css?v={{ \Illuminate\Support\Str::random() }}">
 </head>
 <body>
