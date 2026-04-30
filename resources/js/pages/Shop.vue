@@ -56,12 +56,12 @@
                     <h4>{{ item.name }}</h4>
                     <img :src="item.icon" width="64" height="64">
                     <span class="btn_common success" v-if="item.discount">
-                        {{ item.price }} {{ declOfNum(item.price, ['эйв', 'эйва', 'эйвов']) }}
+                        {{ item.price }} {{ declOfNum(item.price, ['баунд', 'баунда', 'баундов']) }}
                         <small>(-{{item.discount}}%)</small>
                         <small>за {{ item.count }} шт.</small>
                     </span>
                     <span class="btn_common primary" v-else>
-                        {{ item.price }} {{ declOfNum(item.price, ['эйв', 'эйва', 'эйвов']) }}
+                        {{ item.price }} {{ declOfNum(item.price, ['баунд', 'баунда', 'баундов']) }}
                         <small>за {{ item.count }} шт.</small>
                     </span>
                 </a>
@@ -95,11 +95,11 @@
                                     </li>
                                     <li class="strike" v-if="item.oldprice">
                                         <span>Старая цена:</span>
-                                        <b>{{ item.oldprice }} {{ declOfNum(item.oldprice, ['эйв', 'эйва', 'эйвов'])  }} за {{ item.count }} шт.</b>
+                                        <b>{{ item.oldprice }} {{ declOfNum(item.oldprice, ['баунд', 'баунда', 'баундов'])  }} за {{ item.count }} шт.</b>
                                     </li>
                                     <li>
                                         <span>Цена:</span>
-                                        <b>{{ item.price }} {{ declOfNum(item.price, ['эйв', 'эйва', 'эйвов']) }} за {{ item.count }} шт.</b>
+                                        <b>{{ item.price }} {{ declOfNum(item.price, ['баунд', 'баунда', 'баундов']) }} за {{ item.count }} шт.</b>
                                     </li>
                                     <li v-if="item.discount">
                                         <span>Скидка:</span>
@@ -118,7 +118,7 @@
                     </div>
                     <div class="footer">
                         <a href="#" class="btn_large success" @click.prevent="buyItem">
-                            <span>Купить за <span id="price">{{ countPrice() }}</span> {{ declOfNum(countPrice(), ['эйв', 'эйва', 'эйвов']) }}</span>
+                            <span>Купить за <span id="price">{{ countPrice() }}</span> {{ declOfNum(countPrice(), ['баунд', 'баунда', 'баундов']) }}</span>
                         </a>
                     </div>
                     <div class="enchant" style="display: none;">
@@ -131,7 +131,7 @@
                                 <li :class="getEnchantLvl(enchant) ? 'checked' : ''" v-for="enchant in all_enchants" @click.left="changeEnchant(enchant, true)" @click.right="changeEnchant(enchant, false)">
                                     <div>{{ enchant.name }} <span>{{ getEnchantLvl(enchant) + ' / ' + enchant.max_level}}</span></div>
                                     <div class="col"></div>
-                                    <div>{{ getEnchantPrice(enchant) }} эйв.</div>
+                                    <div>{{ getEnchantPrice(enchant) }} баунд.</div>
                                 </li>
                             </ul>
                             <p>
